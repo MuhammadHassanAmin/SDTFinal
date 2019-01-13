@@ -15,20 +15,30 @@ namespace Final
             jobID = Convert.ToInt32(Request.QueryString["jobID"].ToString());
             SDT_FinalEntities context = new SDT_FinalEntities();
             var applications = context.junc_job_applicant.Where(j => j.job_id == jobID);
-            List<user> users = new List<user>();
-            foreach (var user in applications)
+          
+                List<user> users = new List<user>();
+                foreach (var user in applications)
+                {
+                    int applicantID = Convert.ToInt32(user.applicant_id);
+                    var temp = context.users.Where(u => u.id == applicantID).First();
+                    user tempUser = new user();
+                    tempUser.id = temp.id;
+                    tempUser.name = temp.name;
+                    users.Add(tempUser);
+                }
+            if (users.Any())
             {
-                int applicantID = Convert.ToInt32(user.applicant_id);
-                var temp = context.users.Where(u => u.id == applicantID).First();
-                user tempUser = new user();
-                tempUser.id = temp.id;
-                tempUser.name = temp.name;
 
-                users.Add(tempUser);
+                dgvApplications.DataSource = users;
+                dgvApplications.DataBind();
+
+            }
+            else
+            {
+                headingText.InnerHtml = "No User Has Applied for this Job Yet";
             }
 
-            dgvApplications.DataSource = users;
-            dgvApplications.DataBind();
+          
 
         }
         protected void sendCall_Click(object sender, EventArgs e)

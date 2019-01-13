@@ -16,13 +16,11 @@ namespace Final
             {
                 Response.Redirect("~/login.aspx");
             }
-
             SDT_FinalEntities context = new SDT_FinalEntities();
-            dgvNewUsers.DataSource = context.users.Where(u => u.type == "employee" && u.account_status == null).ToList();
+            dgvNewUsers.DataSource = context.users.Where(u => u.type == "employee" && u.account_status == "pendingApproval").ToList();
             dgvNewUsers.DataBind();
             dgvApprovedUseres.DataSource = context.users.Where(u => u.type == "employee" && u.account_status == "approved" && (u.isBlackList == false || u.isBlackList == null)).ToList();
             dgvApprovedUseres.DataBind();
-
         }
 
         protected void blackListUser_Click(object sender, EventArgs e)
@@ -59,23 +57,7 @@ namespace Final
             context.SaveChanges();
             dgvNewUsersRefresh();
         }
-        protected void Upload(object sender, EventArgs e)
-        {
-            using (Stream fs = FileUpload1.PostedFile.InputStream)
-            {
-                using (BinaryReader br = new BinaryReader(fs))
-                {
-                    byte[] bytes = br.ReadBytes((Int32)fs.Length);
-                    SDT_FinalEntities context = new SDT_FinalEntities();
-                    int uid = Convert.ToInt32(Session["uid"]);
-                    var user = context.users
-                            .Where(u => u.id == uid)
-                            .FirstOrDefault();
-                    user.dp = bytes;
-                    context.SaveChanges();
-                }
-            }
-        }
+       
         protected void dgvNewUsersRefresh()
         {
             SDT_FinalEntities context = new SDT_FinalEntities();

@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="SDT_FinalModel.job" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="SDT_FinalModel.CV" Width="1.5" PointX="3.375" PointY="4.75" />
         <EntityTypeShape EntityType="SDT_FinalModel.junc_job_applicant" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SDT_FinalModel.company" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

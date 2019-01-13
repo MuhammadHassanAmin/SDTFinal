@@ -8,8 +8,9 @@
         <input type="checkbox" id="nav-links">
         <label for="nav-links"></label>
         <ul>
-            <li> <a href="http://hassanamin.website/web3ds/index.php"><span class="fas fa-home"></span> Home</a></li>
+       
               <%--Employee Links Start--%>
+            <li runat="server" id="viewCompanyLink"><a href="viewCompany.aspx"><span class="far fa-building"></span> My Company</a></li>
             <li runat="server" id="createJobLink"><a href="createJob.aspx"><span class="fas fa-clipboard-list"></span> Create Job</a></li>
             <%--Job Seeker Links Start--%>
             <li runat="server" id="searchJobLink"><a href="searchJob.aspx"><span class="fas fa-search"></span> Search Job</a></li>

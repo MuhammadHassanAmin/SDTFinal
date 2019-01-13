@@ -23,8 +23,7 @@
         </div>
         <div class="form-container">
             <h4>Welcome <%:Session["uname"]%> </h4>
-   <asp:FileUpload ID="FileUpload1" runat="server" />
-    <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="Upload" />
+
             <asp:GridView ID="dgvNewUsers" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="dgvNewUsers_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField  DataField="name" HeaderText="Name"/>

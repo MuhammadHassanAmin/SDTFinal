@@ -13,6 +13,7 @@ namespace Final
         {
             //Employee Links
             createJobLink.Style.Add("display", "none");
+            viewCompanyLink.Style.Add("display", "none");
             //JobSeeker Links
             searchJobLink.Style.Add("display", "none");
             createCVLink.Style.Add("display", "none");
@@ -32,8 +33,10 @@ namespace Final
                 }
                 else if(Session["utype"].ToString() == "employee")
                 {
+
                     dashboardLink.HRef = "~/employeeDashboard.aspx";
                     createJobLink.Style.Add("display", "inline-block");
+                    viewCompanyLink.Style.Add("display", "inline-block");
 
                 }
                 else if (Session["utype"].ToString() == "jobseeker")

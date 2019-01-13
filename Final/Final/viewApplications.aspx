@@ -20,7 +20,7 @@
             </div>
             <div class="form-container">
                 <h4>Welcome <%:Session["uname"]%> </h4>
-                <h3 class="text-center">Following Users Have Applied For this Job</h3>
+                <h3 id="headingText" runat="server" class="text-center">Following Users Have Applied For this Job</h3>
                 <asp:GridView ID="dgvApplications" runat="server" AutoGenerateColumns="false">
                     <Columns>
                         <asp:BoundField DataField="name" HeaderText="Application Name" />

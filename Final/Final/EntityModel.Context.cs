@@ -30,5 +30,6 @@ namespace Final
         public virtual DbSet<job> jobs { get; set; }
         public virtual DbSet<CV> CVs { get; set; }
         public virtual DbSet<junc_job_applicant> junc_job_applicant { get; set; }
+        public virtual DbSet<company> companies { get; set; }
     }
 }

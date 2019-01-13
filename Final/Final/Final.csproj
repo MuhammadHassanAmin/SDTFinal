@@ -158,12 +158,16 @@
     <Content Include="updateJob.aspx" />
     <Content Include="viewApplications.aspx" />
     <Content Include="viewAppliedJobs.aspx" />
+    <Content Include="viewCompany.aspx" />
     <Content Include="viewCV.aspx" />
     <Content Include="viewJob.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLayer\BusinessUsers.cs" />
+    <Compile Include="company.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="createCV.aspx.cs">
       <DependentUpon>createCV.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -306,6 +310,13 @@
     </Compile>
     <Compile Include="viewAppliedJobs.aspx.designer.cs">
       <DependentUpon>viewAppliedJobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewCompany.aspx.cs">
+      <DependentUpon>viewCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewCompany.aspx.designer.cs">
+      <DependentUpon>viewCompany.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewCV.aspx.cs">
       <DependentUpon>viewCV.aspx</DependentUpon>

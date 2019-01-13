@@ -12,14 +12,13 @@ namespace Final
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class company
     {
         public int id { get; set; }
+        public Nullable<int> user_id { get; set; }
         public string name { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public string type { get; set; }
-        public string account_status { get; set; }
-        public Nullable<bool> isBlackList { get; set; }
+        public string about { get; set; }
+        public string foundedYear { get; set; }
+        public string address { get; set; }
     }
 }

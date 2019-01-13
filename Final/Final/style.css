@@ -117,6 +117,13 @@ form{
 }
 
 /*ASP CONTROLS CSS*/
+.result-msg{
+        font-size: 1.3vw !important;
+    text-align: center !important;
+    display: block !important;
+    float: none !important; 
+    
+}
 #errorMsg{
         font-size: 1.3vw;
     text-align: center;

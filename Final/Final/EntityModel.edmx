@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="SDT_FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="about" Type="nvarchar(max)" />
+          <Property Name="foundedYear" Type="nvarchar(max)" />
+          <Property Name="address" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="CV">
           <Key>
             <PropertyRef Name="id" />
@@ -61,11 +72,11 @@
           <Property Name="email" Type="nvarchar" MaxLength="50" />
           <Property Name="password" Type="nvarchar" MaxLength="50" />
           <Property Name="type" Type="nvarchar" MaxLength="50" />
-          <Property Name="dp" Type="image" />
           <Property Name="account_status" Type="nvarchar" MaxLength="50" />
           <Property Name="isBlackList" Type="bit" />
         </EntityType>
         <EntityContainer Name="SDT_FinalModelStoreContainer">
+          <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CV" EntityType="Self.CV" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="jobs" EntityType="Self.jobs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="junc_job_applicant" EntityType="Self.junc_job_applicant" Schema="dbo" store:Type="Tables" />
@@ -85,7 +96,6 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="dp" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="account_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="isBlackList" Type="Boolean" />
         </EntityType>
@@ -95,6 +105,7 @@
           <EntitySet Name="jobs" EntityType="SDT_FinalModel.job" />
           <EntitySet Name="CVs" EntityType="SDT_FinalModel.CV" />
           <EntitySet Name="junc_job_applicant" EntityType="SDT_FinalModel.junc_job_applicant" />
+          <EntitySet Name="companies" EntityType="SDT_FinalModel.company" />
         </EntityContainer>
         <EntityType Name="sysdiagram">
           <Key>
@@ -143,6 +154,17 @@
           <Property Name="job_id" Type="Int32" />
           <Property Name="applicant_id" Type="Int32" />
         </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="about" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="foundedYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -154,7 +176,6 @@
               <MappingFragment StoreEntitySet="users">
                 <ScalarProperty Name="isBlackList" ColumnName="isBlackList" />
                 <ScalarProperty Name="account_status" ColumnName="account_status" />
-                <ScalarProperty Name="dp" ColumnName="dp" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -210,6 +231,18 @@
               <MappingFragment StoreEntitySet="junc_job_applicant">
                 <ScalarProperty Name="applicant_id" ColumnName="applicant_id" />
                 <ScalarProperty Name="job_id" ColumnName="job_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="companies">
+            <EntityTypeMapping TypeName="SDT_FinalModel.company">
+              <MappingFragment StoreEntitySet="company">
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="foundedYear" ColumnName="foundedYear" />
+                <ScalarProperty Name="about" ColumnName="about" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
