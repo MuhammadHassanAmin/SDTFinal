@@ -12,9 +12,13 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ( ! Convert.ToBoolean(Session["loggedin"]))
+            if (!Convert.ToBoolean(Session["loggedin"]))
             {
                 Response.Redirect("~/login.aspx");
+            }
+            else if (Session["utype"].ToString() != "owner")
+            {
+                Response.Redirect("~/logout.aspx");
             }
             SDT_FinalEntities context = new SDT_FinalEntities();
             dgvNewUsers.DataSource = context.users.Where(u => u.type == "employee" && u.account_status == "pendingApproval").ToList();

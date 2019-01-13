@@ -30,8 +30,18 @@ namespace Final
 
         protected void applyNow_Click(object sender, EventArgs e)
         {
+            applyNow.Style.Add("display", "none");
             int userID = Convert.ToInt32(Session["uid"]);
             SDT_FinalEntities context = new SDT_FinalEntities();
+            if (context.junc_job_applicant.Count(j=> j.job_id == jobID && j.applicant_id == userID) > 0)
+            {
+                successMsg.InnerHtml = "You have Already applied for this job!";
+
+            }
+            else
+            {
+
+            
             junc_job_applicant job_user = new junc_job_applicant();
             job_user.applicant_id = userID;
             job_user.job_id = jobID;
@@ -39,6 +49,7 @@ namespace Final
             context.SaveChanges();
             successMsg.InnerHtml = "You have successfully applied for this job!";
             applyNow.Style.Add("display", "none");
+            }
 
         }
     }

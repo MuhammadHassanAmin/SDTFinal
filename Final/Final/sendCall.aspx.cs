@@ -18,6 +18,10 @@ namespace Final
             {
                 Response.Redirect("~/login.aspx");
             }
+            else if (Session["utype"].ToString() != "employee")
+            {
+                Response.Redirect("~/logout.aspx");
+            }
             userID = Convert.ToInt32(Request.QueryString["userID"]);
              jobID  = Convert.ToInt32(Request.QueryString["jobID"]);
             SDT_FinalEntities context = new SDT_FinalEntities();
@@ -44,21 +48,6 @@ namespace Final
              
                 throw;
             }
-
-            //SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
-            //smtpClient.Credentials = new System.Net.NetworkCredential("noman.amin321@gmail.com", "nouman321");
-            //smtpClient.UseDefaultCredentials = true;
-            //smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //smtpClient.EnableSsl = true;
-            //MailMessage mail = new MailMessage();
-            ////Setting From , To and CC
-            //mail.From = new MailAddress(emailOfSender, "Job Portal");
-            //mail.To.Add(new MailAddress(emailOfReceiver));
-            //mail.Subject = "You Have Received a Interview Call From " + emailOfSender;
-            //mail.SubjectEncoding = System.Text.Encoding.UTF8;
-            //mail.Body = body.InnerText;
-            //smtpClient.Send(mail);
-    
         }
     }
 }

@@ -11,8 +11,15 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (  Session["loggedin"] != null)
+            if (!Convert.ToBoolean(Session["loggedin"]))
             {
+                Response.Redirect("~/login.aspx");
+            }
+            else if (Session["utype"].ToString() != "employee")
+            {
+                Response.Redirect("~/logout.aspx");
+            }
+          
                 if ((bool)Session["loggedin"])
                 {
                     int uid = Convert.ToInt32(Session["uid"]);
@@ -22,7 +29,7 @@ namespace Final
                     dgvClosedJobs.DataSource = context.jobs.Where(j => j.user_id == uid && j.isOpen == false).ToList();
                     dgvClosedJobs.DataBind();
                 }
-            }
+            
             else
             {
                 Response.Redirect("~/login.aspx");

@@ -11,7 +11,14 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
+            else if (Session["utype"].ToString() != "employee")
+            {
+                Response.Redirect("~/logout.aspx");
+            }
         }
 
         protected void createJobSubmit_Click(object sender, EventArgs e)

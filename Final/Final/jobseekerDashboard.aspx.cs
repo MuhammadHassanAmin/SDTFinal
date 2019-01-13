@@ -11,6 +11,14 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
+            else if (Session["utype"].ToString() != "jobseeker")
+            {
+                Response.Redirect("~/logout.aspx");
+            }
             SDT_FinalEntities context = new SDT_FinalEntities();
             dgvAllJobs.DataSource = context.jobs.Where(j => j.isOpen == true).ToList();
             dgvAllJobs.DataBind(); 

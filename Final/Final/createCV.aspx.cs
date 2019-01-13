@@ -12,6 +12,14 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
+            else if (Session["utype"].ToString() != "jobseeker")
+            {
+                Response.Redirect("~/logout.aspx");
+            }
             int userID = Convert.ToInt32(Session["uid"]);
             if (isCvExist(userID))
             {

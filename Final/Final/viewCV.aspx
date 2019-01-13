@@ -29,7 +29,7 @@
             </div>
             <div class="form-container">
                 <div class="label-input-container">
-                    <img id="dp" src="" runat="server" alt="" />
+                    <img id="dp" width="300" src="" runat="server" alt="" />
                 </div>
 
 
