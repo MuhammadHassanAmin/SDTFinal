@@ -1,0 +1,1509 @@
+﻿@font-face {
+    font-family: 'Muli', sans-serif;
+    src: url('../fonts/Muli-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #757575;
+    background-color: #fff;
+    font-family: 'Muli', sans-serif;
+}
+
+a {
+    color: #757575;
+}
+a:hover{
+    text-decoration: none;
+    
+}
+.primary-color {
+    color: #2196F3;
+}
+.error-text{
+    color: red;
+}
+.light-gray{
+    color: #afafaf;
+}
+
+.flat-button {
+    border-radius: 40px;
+    padding: 10px 20px;
+    background-color: #757575;
+    border: 0;
+    overflow: hidden;
+    font-size: 14px;
+    display: inline-block;
+    color: white;
+    outline: none;
+    width: max-content;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.flat-button:hover {
+    background-color: #2196F3;
+    transition: 0.5s;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #0000001a;
+}
+
+table,
+th,
+td {
+    border: 1px solid #0000001a;
+}
+
+th {
+    margin-bottom: 1px;
+}
+
+.clear {
+    clear: both;
+}
+
+.vertically-align-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.txt-center{
+    text-align: center !importanft;
+}
+.y-axis-50p {
+    transform: translateY(-50%);
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.width-100p {
+    width: 100%
+}
+.width-49p {
+    width: 49%
+}
+form{
+    font-size: 0 !important;
+}
+
+/*ASP CONTROLS CSS*/
+.m-0{
+    margin:0;
+}
+.p-0{
+    padding:0;
+}
+div table{margin:0 auto;}
+#dgvNewUsers{
+    margin : 5px auto;
+}
+#dgvApprovedUseres{
+    margin : 5px auto;
+
+}
+table#dgvNewUsers tr td {
+        padding: 0 10px;
+}
+
+table#dgvApprovedUseres tr td {
+        padding: 0 10px;
+}
+ .label-input-container textarea{
+        width: 80%; 
+        height:100px;
+    }
+
+/*----------------------------------------
+    Generic Components
+----------------------------------------*/
+/*--------------------
+        Header
+--------------------*/
+header {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+/*--------------------
+        Navigation
+--------------------*/
+nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 49px;
+}
+
+nav ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    background-color: white;
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    padding: 4px;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #333333;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+nav label {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    background: url(../assets/images/nav-links.png) no-repeat;
+    background-size: cover;
+}
+
+nav input[type="checkbox"]:checked~ul {
+    display: block;
+}
+
+/*--------------------
+        footer
+--------------------*/
+footer {
+    width: 100%;
+    /* margin-top: 41px; */
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    background-color: #fbfbfb;
+    padding: 20px 0px;
+}
+
+footer h3 {
+    margin-bottom: 4px;
+
+}
+
+footer .social-icons {
+    font-size: 30px;
+}
+
+.footer-left {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.footer-left p {
+    margin: 5px auto;
+}
+
+.footer-rigt {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.subscribe-btn {
+    position: relative;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 10px 0px;
+    background-color: #757575;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #0000001a;
+    color: white;
+    outline: none;
+    width: 32%;
+    display: inline-block;
+}
+
+footer .subscribe-btn:hover {
+    background-color: #2196F3;
+    transition: 0.5s;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.footer-right .vertically-align-center {
+    position: static;
+    top: 0;
+    transform: translateY(0);
+}
+
+footer .footer-right input {
+    display: inline-block;
+    width: 40%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    padding: 10px 5px;
+    outline: none;
+    border-right: 0;
+    border-color: #0000001a;
+}
+
+/*--------------------
+Section Heading
+--------------------*/
+.section-heading {
+    background-color: #eeeeee7a;
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.section-heading h3 {
+    padding: 3px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.lines-png {
+    width: 105px;
+    height: 9px;
+    background: url(../assets/images/lines.png) no-repeat;
+    background-size: cover;
+    /* z-index: 100; */
+    /* background-color: red; */
+    display: block;
+    margin: 0 auto;
+}
+
+/*----------------------------------------
+     COMPONENT WISE CSS For Home Page
+----------------------------------------*/
+
+/*--------------------
+Cover on home page
+--------------------*/
+.cover {
+    background: url(../assets/images/home-page-cover.jpg) no-repeat;
+    background-size: cover;
+    height: 250px;
+    /* background-position-y: -60px; */
+}
+
+.cover-text-container {
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: #00000073;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    /* top: 25%; */
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.cover-text-container h3 {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.cover-text-container h6 {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.cover-text-container p {
+    padding: 0 10px;
+    margin: 0;
+    font-size: 13px;
+}
+
+/*--------------------
+Services on Homepage
+--------------------*/
+.service-container {
+    box-sizing: border-box;
+    width: 88%;
+    height: auto;
+    background-color: white;
+    overflow: auto;
+    margin: 0 auto;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.service-box {
+    width: 100%;
+    background-color: #eeeeee0f;
+    height: auto;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #0000001a;
+    /* margin: 5px 0; */
+}
+
+.svg-icon-container {
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+}
+
+#web-design-box:hover .fa-paint-brush {
+    color: #2196F3;
+    transition: 0.5s;
+}
+
+#web-development-box:hover .fa-code {
+    color: #2196F3;
+    transition: 0.5s;
+}
+
+#web-deployment-box:hover .fa-server {
+    color: #2196F3;
+    transition: 0.5s;
+}
+
+.service-box h3 {
+    padding: 0;
+    margin: 10px 0 1px 0;
+}
+
+.service-box p {
+    padding: 0 5px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*-----------------------------
+Our Portfolio on Home page
+-------------------------------*/
+.protfolio-container {
+    width: 88%;
+    background: white;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.protfolio-box {
+    width: 100%;
+    height: auto;
+    /* background-color: #fff; */
+    margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+    border-bottom: 1px solid #0000001a;
+}
+
+.protfolio-box h3 {
+    margin-bottom: 4px;
+}
+
+.protfolio-box p {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.protfolio-box img {
+    width: 70%;
+}
+
+.protfolio-box p h4 {
+    padding: 0;
+    margin: 0;
+}
+
+/*-----------------------
+Our Team on Home page
+-----------------------*/
+.our-team-container {
+    width: 88%;
+    background: white;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto 40px auto;
+    /* margin-bottom: 41px; */
+    box-sizing: border-box;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.team-box {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.team-box h3,
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.team-box p {
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.team-box .dp {
+    width: 100%;
+    height: 200px;
+}
+
+.team-member-socail-links {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.team-member-socail-links span {
+    font-size: 30px;
+}
+
+.team-member-socail-links span:hover {
+    color: #2196F3;
+    transition: 1s;
+}
+
+/*----------------------------------------
+     About Us Page COMPONENT WISE CSS 
+----------------------------------------*/
+/*----------------------------------------
+     About Us description
+----------------------------------------*/
+.about-us {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    text-align: center;
+    background: url(../assets/images/about-us-cover.jpg) no-repeat;
+    background-size: cover;
+}
+
+.about-us-content {
+    width: 90%;
+    height: 100%;
+    padding: 10px 0;
+    color: white;
+    border-radius: 90px;
+    margin: 0 auto;
+    background-color: #00000087;
+}
+
+.about-us-content h3 {
+    margin: 4px;
+}
+
+.about-us-content p {
+    font-size: 14px;
+    width: 70%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+/*----------------------------------------
+    Our Location on about us
+----------------------------------------*/
+.our-location-container {
+    width: 100%;
+    height: auto;
+}
+
+.our-location-container .map-img {
+    background: url(../assets/images/map-location.png) no-repeat;
+    background-size: 140%;
+    width: 100%;
+    height: 200px;
+    background-position-y: -45px;
+    background-position-x: -45px;
+}
+
+.location-box {
+    width: 72%;
+    height: auto;
+    margin: 10px auto;
+    position: relative;
+}
+
+.location-box p {
+    display: inline-block;
+    width: 80%;
+    font-size: 14px;
+    margin: 0 0 0 15px;
+}
+
+.location-box span {
+    /* transform: translateY(-50%); */
+    font-size: 16px;
+    /* margin: auto 0; */
+    /* padding: 25% 0; */
+}
+
+.location-box-container {
+    width: 100%;
+}
+
+/*----------------------------------------
+    Team Page COMPONENT WISE CSS 
+----------------------------------------*/
+/*-------------------------------
+    cover on team page
+-------------------------------*/
+.team-cover {
+    background: url(../assets/images/team-cover.jpg);
+    background-size: cover;
+}
+
+/*----------------------------------------
+COMPONENT WISE CSS For Main Services Page
+----------------------------------------*/
+/*----------------------------------------
+Services Box on main service page
+----------------------------------------*/
+.service-page-box {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.service-page-box h4 {
+    margin-bottom: 1px;
+}
+
+.service-page-box p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.service-page-box table {
+    width: 90%;
+    font-size: 14px;
+    margin: 5px auto;
+    border-collapse: collapse;
+    border: 1px solid #0000001a;
+}
+
+.service-page-box table span {
+    font-size: 20px;
+}
+
+.service-page-box table th {
+    height: 30px;
+}
+
+.service-page-box table td:nth-child(odd) {
+    width: 50%;
+    margin: 0 auto;
+    height: 25px;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+/*----------------------------------------
+COMPONENT WISE CSS For Package Page
+----------------------------------------*/
+/*----------------------------------------
+Package Box on Package Page
+----------------------------------------*/
+.service-page-box .package-box {
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.service-page-box .package-box table {
+    text-align: center;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.service-page-box .package-box table th span {
+    font-size: 15px;
+}
+
+.service-page-box .package-box table th {
+    padding: 10px;
+}
+
+.service-page-box .package-box table td:nth-child(odd) {
+    text-align: center;
+}
+
+.service-page-box .package-box table td:last-child {
+    padding: 0;
+}
+
+/*----------------------------------------
+COMPONENT WISE CSS For contact us Page
+----------------------------------------*/
+/*----------------------------------------
+Form container on contact us Page
+----------------------------------------*/
+.form-container {
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 25px auto;
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+.form-container form p{
+    font-size: 14px;
+}
+.form-container h4 {
+  
+    margin-bottom: 10px;
+}
+
+
+
+.form-container label {
+    float: left;
+    display: inline;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-container input {
+    border: 0;
+    margin-bottom: 5px;
+    outline: none;
+    width: 80%;
+    border-bottom: 1px solid #0000001a;
+}
+
+.form-container .label-input-container {
+    display: block;
+}
+.label-input-container select{
+    width: auto;
+    font-size: 14px;
+    height: 30px;
+    border: 1px solid #0000001a;
+    border-radius: 5px;
+    padding: 0 5px;
+    outline: none;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.label-input-container select option{
+    width: 100%;
+    
+}
+
+.form-container form textarea {
+    width: 80%;
+    border: 0;
+    margin-bottom: 5px;
+    outline: none;
+    border-bottom: 1px solid #0000001a;
+}
+
+/*----------------------------------------------------------
+     COMPONENT WISE CSS For unauthorized access page
+----------------------------------------------------------*/
+/*--------------------------------
+     warning text container
+--------------------------------*/
+.unthorized-text-container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.unthorized-text-container span{
+   font-size: 100px;
+}
+/*----------------------------------------------------------
+     COMPONENT WISE CSS For order confirmationpage
+----------------------------------------------------------*/
+/*--------------------------------
+     total price container
+--------------------------------*/
+.total-price{
+    
+    text-align: center;
+
+}
+.total-price span{ 
+    float: none !important;
+    font-size: 10px;
+}
+/*----------------------------------------------------------
+     COMPONENT WISE CSS For admin Dashboard
+----------------------------------------------------------*/
+/*--------------------------------
+     dashboard box 
+--------------------------------*/
+
+.dashboard-box{
+    margin:5px auto;
+    width: 80%;
+    text-align: center;
+
+}
+.dashboard-box h3{
+margin: 2px 0;    
+}
+.dashboard-box p{
+    margin: 0 auto;
+    width: 50%;
+}
+.dashboard-box .order-display-table{
+    border-collapse:collapse;
+    border-collapse: collapse;
+    margin: 5px auto;
+    text-align: left;
+    width: 66%;
+}
+.dashboard-box .order-display-table th {
+    background-color: #f7f7f7;
+}
+.dashboard-box .order-display-table tr td:nth-child(odd){
+        padding: 0 5px;
+        width: 21%;
+        
+}
+table#change-cover{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table#change-cover td{
+padding: 1px 5px;
+display: block;
+}
+
+
+@media(min-width:768px) {
+    th {
+        font-size: 20px;
+    }
+
+    /*----------------------------------------
+    Generic Components for 768
+----------------------------------------*/
+
+    /*-------------------------
+        Header on 768
+-------------------------*/
+    header {
+        height: 60px;
+        box-sizing: border-box;
+    }
+
+    /*------------------------------
+    Navigation on 768
+------------------------------*/
+    nav {
+        margin-top: 0px;
+        width: 606px;
+        float: right;
+        position: relative;
+        height: 100%;
+        top: 0;
+    }
+
+    nav ul {
+        display: block;
+        height: 60px;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    nav ul li {
+        list-style-type: disc;
+        display: inline-block;
+        height: 100%;
+        /* margin: 0 6px; */
+        /* box-sizing: border-box; */
+    }
+
+    nav label {
+        display: none;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        font-size: 13px;
+        width: auto;
+        height: 60px;
+        width: auto;
+        background-color: transparent;
+        border-bottom: #2196F3;
+        padding: 20px 6px;
+    }
+
+    nav ul li:hover {
+        background-color: #2196F3;
+        transition: 1s;
+    }
+
+  
+
+    nav ul li a:hover {
+        color: #FFFFFF !important;
+        transition: 0.5s;
+    }
+
+    nav input[type="checkbox"] {
+        margin: 0;
+        display: none;
+    }
+
+    /*--------------------
+        footer on 768
+--------------------*/
+ 
+
+    .footer-left {
+        width: 49%;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .footer-right {
+        width: 49%;
+        display: inline-block;
+    }
+
+  
+
+    .footer-right .vertically-align-center {
+        position: relative;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /*--------------------
+Section Heading on 768
+--------------------*/
+    .section-heading {
+        height: 80px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+        margin: 2px 0;
+    }
+
+    /*----------------------------------------
+  Home Page COMPONENT WISE CSS For 768px
+----------------------------------------*/
+
+
+    /*--------------------
+Cover on 768
+--------------------*/
+    .cover {
+        height: 400px;
+        background-position-y: -60px;
+    }
+
+    .cover-text-container {
+        font-size: 30px;
+    }
+
+    .cover-text-container h3 {
+        padding: 10px 0;
+    }
+
+    .cover-text-container p {
+        font-size: 22px;
+    }
+
+
+
+    /*-------------------------------
+Services on Homepage for 768
+----------------------------------*/
+    .service-container {
+        margin: 0 auto 35px auto;
+        width: 95%;
+    }
+
+    .service-box {
+        width: 32.8%;
+        display: inline-block;
+        box-sizing: border-box;
+        border-right: 1px solid #0000001a;
+        border-bottom: 0;
+    }
+
+    #web-development-box {
+        /* position: relative; */
+        /* top: 0px; */
+        height: 177px;
+        padding: 0;
+    }
+
+    #web-deployment-box {
+        border-right: 0;
+    }
+
+    .service-container button {
+        margin: 0 auto 10px auto;
+    }
+
+    /*---------------------------
+  Our Portfolio on homepage for 768
+-----------------------------*/
+    .protfolio-container {
+        width: 95%;
+        width: 95%;
+        margin: 0 auto;
+        margin: 0 auto 35px auto;
+    }
+
+    .protfolio-box {
+        width: 90%;
+        display: inline-block;
+        margin: 10px 5px;
+        width: 31.5%;
+        height: 355px;
+        /* top: 0; */
+        /* position: relative; */
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+    }
+
+    .protfolio-box p {
+        font-size: 14px;
+        height: 122px;
+    }
+
+    .protfolio-box img {
+        width: 168px;
+        height: 112px;
+    }
+
+    
+
+    /*----------------------------
+ Our Team on homepage for 768
+----------------------------*/
+    .team-box:nth-child(3) {
+        border: 0;
+    }
+
+    .our-team-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .team-box {
+        display: inline-block;
+        overflow: auto;
+        height: auto;
+        width: 30.95%;
+        /* margin: 10px 10px; */
+        margin: 10px 5px;
+        box-sizing: border-box;
+        width: 31.5%;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+        border-right: 1px solid #eeeeee0f;
+    }
+
+    .team-box p {
+        height: 90px;
+    }
+
+
+
+    /*----------------------------------------
+ About Us Page COMPONENT WISE CSS for 768
+----------------------------------------*/
+    /*----------------------------------------
+     About Us description for 768
+----------------------------------------*/
+    .about-us {
+        height: 500px;
+        position: relative;
+    }
+
+    .about-us-content {
+        width: 60%;
+        height: 25%;
+        padding: 20px 0;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* margin: 0 auto !important; */
+        /* color: white; */
+        border-radius: 60px
+            /* margin: 0 auto; */
+            /* background-color: #00000087; */
+        ;
+    }
+
+    .about-us-content h3 {
+        margin: 4px;
+    }
+
+    .about-us-content p {
+        /* font-size: 14px; */
+        width: 94%;
+        margin: 5px auto;
+        /* text-align: center; */
+    }
+
+    /*----------------------------------------
+    Our Location on about us for 768
+----------------------------------------*/
+    .our-location-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .our-location-container .map-img {
+        /* background: url(../assets/images/map-location.png) no-repeat; */
+        background-size: cover;
+        /* width: 100%; */
+        height: 300px;
+        background-position-y: -80px;
+        background-position-x: 0;
+    }
+
+    .location-box {
+        width: 81%;
+        height: auto;
+        margin: 10px auto;
+        position: relative;
+    }
+
+    .location-box p {
+        display: inline-block;
+        width: 83%;
+        font-size: 14px;
+        margin: 0 0 0 15px;
+    }
+
+    .location-box-container {
+        width: 40%;
+        margin: 50px auto;
+    }
+
+    .location-box span {
+        /* transform: translateY(-50%); */
+        font-size: 16px;
+        /* margin: auto 0; */
+        /* padding: 25% 0; */
+    }
+
+    /*------------------------------------------------
+COMPONENT WISE CSS of Main Services Page for 768
+------------------------------------------------*/
+    /*----------------------------------------
+Services Box on main services for 768
+----------------------------------------*/
+    .service-page-box table {
+        width: 60%;
+    }
+
+    .service-page-box p {
+        width: 80%;
+    }
+
+    /*----------------------------------------
+COMPONENT WISE CSS of Packages Page for 768 
+----------------------------------------*/
+    /*----------------------------------------
+Package Box on packages page for 768
+----------------------------------------*/
+    .service-page-box .package-box {
+        width: 32.33%;
+        display: inline-block;
+    }
+
+    .service-page-box .package-box table {
+        width: 95%;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    /*----------------------------------------
+COMPONENT WISE CSS of contact us Page for 768
+----------------------------------------*/
+    /*----------------------------------------------------
+contact us Form container on contact us page for 768
+------------------------------------------------------*/
+    .form-container {
+        font-size: 18px;
+        width: 75%;
+        text-align: center;
+        padding: 50px;
+        /* margin-top: 0; */
+    }
+
+   
+
+    .form-container span {
+        float: right;
+        font-size: 30px;
+    }
+
+    .form-container label {
+        display: inline-block;
+       font-size: 18px;
+    }
+
+    .form-container input[type="submit"] {
+   
+        width: max-content;
+    }
+    
+       .form-container input[type="text"],input[type="password"] {
+        width: 80%; 
+    }
+
+    .form-container .label-input-container {
+        display: inline-block;
+        width: 50%;
+    }
+
+   
+
+   
+
+    .form-container form textarea {
+        width: 100%;
+        resize: none;
+    }
+/*----------------------------------------------------------
+     COMPONENT WISE CSS For admin Dashboard
+----------------------------------------------------------*/
+/*--------------------------------
+     dashboard box 
+--------------------------------*/
+.form-container .dashboard-box:first-of-type{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+table#change-cover td{
+    display: table-cell !important;
+    font-size: 14px;
+}
+}
+
+@media(min-width:1024px) {
+
+    /*----------------------------------------
+    Generic Components for 1024
+----------------------------------------*/
+    /*-----------------------
+        Header for 1024px
+-----------------------*/
+    header h1 {
+        font-size: 36px;
+    }
+
+    /*--------------------
+        Navigation for 1024px
+--------------------*/
+    nav {
+        width: 1160px;
+    }
+
+    nav ul li {
+        width: 163px;
+    }
+
+    nav ul li a {
+        width: 100%;
+        /* margin: 0 auto; */
+        font-size: 17px;
+        text-align: center;
+    }
+
+    /*--------------------
+  footer for1024px
+--------------------*/
+    footer {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    /*-------------------------------------
+ Component wise css of homepage for 1024
+-------------------------------------*/
+    /*---------------------------
+Cover on homepage for 1024px
+---------------------------*/
+    .cover {
+        height: 400px;
+        background-position-y: -300px;
+    }
+
+    .cover-text-container {
+        font-size: 30px;
+        width: 50%;
+        border-radius: 30px;
+    }
+
+    .cover-text-container h3 {
+        padding: 0;
+    }
+
+    .cover-text-container p {
+        font-size: 24px;
+        width: 92%;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+/*--------------------------------
+  protfolio on homepage for 1024px
+--------------------------------*/
+    .protfolio-container {
+        width: 95%;
+    }
+
+    .protfolio-box {
+        border-bottom: 0;
+        width: 31.92%;
+    }
+
+
+
+/*-----------------------------------------------
+ About Us Page COMPONENT WISE CSS for 1024px
+-----------------------------------------------*/
+/*------------------------------------------------------
+About Us description on about us page for 11024px
+------------------------------------------------------*/
+    .about-us {
+        height: 600px;
+        font-size: 17px;
+    }
+
+    .about-us-content {
+        height: 40%;
+        /* padding: 3% 0px; */
+    }
+
+    .about-us-content h3 {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 45%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .about-us-content p {
+        font-size: 17px;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    /*----------------------------------------
+        Our Location on homepage for 1024px
+    ----------------------------------------*/
+   
+
+    .our-location-container .map-img {
+        height: 300px;
+        width: 60%;
+        margin: 0 auto;
+        background-position-y: -84px;
+        background-position-x: 0;
+    }
+
+   
+
+    .location-box p {
+        font-size: 17px;
+    }
+
+    .location-box-container {
+        width: 28%;
+        margin-top: 20px;
+    }
+
+    .location-box span {
+        font-size: 20px;
+    }
+
+/*---------------------------------------------
+COMPONENT WISE CSS of Main Services Page for 1024px 
+---------------------------------------------*/
+/*-----------------------------------------------
+Services Box on main service page for 1024px
+-----------------------------------------------*/
+    .service-page-box table {
+        width: 45%;
+    }
+
+    .service-page-box p {
+        width: 65%;
+        font-size: 15px;
+    }
+
+    .service-page-box h4 {
+        font-size: 20px;
+    }
+
+    .service-page-box table td:nth-child(odd) {
+        font-size: 16px;
+    }
+
+
+
+/*------------------------------------------------
+COMPONENT WISE CSS of Package Page for 1024px
+------------------------------------------------*/
+/*----------------------------------------
+Package Box on package page for 1024[x
+----------------------------------------*/
+    .service-page-box .package-box {
+        width: 25.0%;
+    }
+
+    .service-page-box .package-box table td:nth-child(odd) {
+        height: 40px;
+    }
+
+    
+}
+
+@media(min-width:1280px) {
+/*----------------------------------------
+    Generic Components for 1280px
+----------------------------------------*/
+/*--------------------
+  footer for 1280px
+--------------------*/
+footer {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.footer-right {
+    width: 40%;
+}
+
+.footer-left {
+    width: 30%;
+}
+/*-----------------------------------------------
+ Components wise CSS of Homepage for 1280px
+-----------------------------------------------*/
+ /*------------------------------
+Services on Homepage for 1280
+------------------------------*/
+    .service-container {
+        width: 80%;
+    }
+
+/*---------------------------
+    Our Team on homepage for 1280px
+---------------------------*/
+    .our-team-container {
+        width: 80%;
+    }
+
+    .team-box {
+        width: 31.2%;
+        margin: 10px 10px;
+    }
+
+    .team-box p {
+        font-size: 14px;
+    }
+
+/*--------------------
+  Our team on homepage for1024px
+--------------------*/
+    .protfolio-container {
+        width: 80%;
+    }
+
+
+
+}
