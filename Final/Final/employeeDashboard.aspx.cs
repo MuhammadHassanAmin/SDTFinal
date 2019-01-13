@@ -29,6 +29,11 @@ namespace Final
             }
         }
         
+        protected void viewReport_Click(object sender, EventArgs e)
+        {
+            int job_id = Convert.ToInt32((sender as LinkButton).CommandArgument);
+            Response.Redirect("jobReport.aspx?jobID=" + job_id);
+        }
         protected void viewApplications_Click(object sender, EventArgs e)
         {
             int job_id = Convert.ToInt32((sender as LinkButton).CommandArgument);

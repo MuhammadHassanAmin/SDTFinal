@@ -46,6 +46,8 @@
                             <asp:BoundField DataField="title" HeaderText="Name" />
                             <asp:BoundField DataField="description" HeaderText="Description" />
                             <asp:BoundField DataField="skills" HeaderText="Required Skills" />
+                            <asp:BoundField DataField="experience" HeaderText="Required Experience" />
+                            <asp:BoundField DataField="salary" HeaderText="Expected Salary" />
                             <asp:BoundField DataField="city" HeaderText="City" />
                             <asp:TemplateField HeaderText="Apply Now">
                                 <ItemTemplate>

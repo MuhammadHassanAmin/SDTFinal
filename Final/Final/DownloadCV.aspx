@@ -14,8 +14,6 @@
 </head>
 <body>
     <uc1:NavUserControl runat="server" ID="NavUserControl" />
-
-
     <form id="form1" runat="server">
         <main class="mt-60">
             <div class="section-heading">
@@ -26,7 +24,7 @@
             </div>
                 <div class="form-container">
                     <div class="label-input-container">
-                        <img id="dp" src="" runat="server" alt="" />
+                        <img id="dp" width="300" src="" runat="server" alt="" />
                     </div>
                         <div id="downloadCVpdf" runat="server">
 

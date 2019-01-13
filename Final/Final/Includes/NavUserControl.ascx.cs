@@ -29,7 +29,7 @@ namespace Final
                 hideIfLoggedin.Style.Add("display", "none");
                 if (Session["utype"].ToString() == "owner")
                 {
-                    dashboardLink.HRef = "ownerDashboard.aspx";
+                    dashboardLink.HRef = "~/ownerDashboard.aspx";
                 }
                 else if(Session["utype"].ToString() == "employee")
                 {

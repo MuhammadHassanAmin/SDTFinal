@@ -116,6 +116,7 @@
     <Content Include="createJob.aspx" />
     <Content Include="DownloadCV.aspx" />
     <Content Include="employeeDashboard.aspx" />
+    <Content Include="jobReport.aspx" />
     <Content Include="jobseekerDashboard.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="ownerDashboard.aspx" />
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="job.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jobReport.aspx.cs">
+      <DependentUpon>jobReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jobReport.aspx.designer.cs">
+      <DependentUpon>jobReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="jobseekerDashboard.aspx.cs">
       <DependentUpon>jobseekerDashboard.aspx</DependentUpon>

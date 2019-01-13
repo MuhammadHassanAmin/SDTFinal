@@ -17,9 +17,14 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SDT_FinalEntities context = new SDT_FinalEntities();
-            var cv = context.CVs.Where(c => c.user_id == 2003).FirstOrDefault();
           
+            int userID =Convert.ToInt32(Session["uid"]);
+            if (!isCvExist(userID))
+            {
+                Response.Redirect("~/createCV.aspx");
+            }
+            SDT_FinalEntities context = new SDT_FinalEntities();
+            var cv = context.CVs.Where(c => c.user_id == userID).FirstOrDefault();
             string base64String = Convert.ToBase64String(cv.dp, 0, cv.dp.Length);
             dp.Src = "data:image/jpg;base64," + base64String;
             Skills.InnerHtml = cv.skills.Trim();
@@ -47,6 +52,16 @@ namespace Final
             Doc.Close();
             Response.Write(Doc);
             Response.End();
+        }
+        protected bool isCvExist(int uid)
+        {
+            SDT_FinalEntities context = new SDT_FinalEntities();
+
+            if (context.CVs.Count(u => u.user_id == uid) > 0)
+            {
+                return true;
+            }
+            else { return false; }
         }
     }
 }

@@ -45,8 +45,6 @@
                 <asp:Button  CssClass="flat-button  mx-auto my-10"  ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
         </div>
 
-
-
     </main>
     </form>
 </body>

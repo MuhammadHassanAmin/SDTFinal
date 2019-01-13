@@ -46,6 +46,12 @@
                                 </asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
+                          <asp:TemplateField HeaderText="View Report">
+                            <ItemTemplate>
+                                <asp:LinkButton CssClass="flat-button  mx-auto my-10" ID="viewReport" Text="View Report" runat="server" CommandArgument='<%# Eval("id") %>' OnClick="viewReport_Click"> 
+                                </asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Delete Job">
                             <ItemTemplate>
                                 <asp:LinkButton CssClass="flat-button  mx-auto my-10" ID="deleteJob" Text="Delete Job" runat="server" CommandArgument='<%# Eval("id") %>' OnClick="deleteJob_Click"> 

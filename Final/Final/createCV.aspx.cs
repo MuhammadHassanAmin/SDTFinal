@@ -12,7 +12,11 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int userID = Convert.ToInt32(Session["uid"]);
+            if (isCvExist(userID))
+            {
+                Response.Redirect("~/downloadCV.aspx");
+            }
         }
 
         protected void createCVSubmit_Click(object sender, EventArgs e)
@@ -45,6 +49,16 @@ namespace Final
         protected void dpUpload_Click(object sender, EventArgs e)
         {
       
+        }
+        protected bool isCvExist(int uid)
+        {
+            SDT_FinalEntities context = new SDT_FinalEntities();
+
+            if (context.CVs.Count(u => u.user_id == uid) > 0)
+            {
+                return true;
+            }
+            else { return false; }
         }
     }
 }
