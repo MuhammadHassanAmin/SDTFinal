@@ -14,7 +14,11 @@ namespace Final
         string emailOfSender, emailOfReceiver;
         protected void Page_Load(object sender, EventArgs e)
         {
-             userID = Convert.ToInt32(Request.QueryString["userID"]);
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
+            userID = Convert.ToInt32(Request.QueryString["userID"]);
              jobID  = Convert.ToInt32(Request.QueryString["jobID"]);
             SDT_FinalEntities context = new SDT_FinalEntities();
             int senderID = Convert.ToInt32(Session["uid"]);

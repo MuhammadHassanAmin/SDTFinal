@@ -12,6 +12,10 @@ namespace Final
         int jobID;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
             jobID = Convert.ToInt32(Request.QueryString["jobID"].ToString());
             SDT_FinalEntities context = new SDT_FinalEntities();
             var applications = context.junc_job_applicant.Where(j => j.job_id == jobID);

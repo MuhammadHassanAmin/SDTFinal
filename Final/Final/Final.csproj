@@ -116,6 +116,7 @@
     <Content Include="createJob.aspx" />
     <Content Include="DownloadCV.aspx" />
     <Content Include="employeeDashboard.aspx" />
+    <Content Include="Includes\isLoggedIn.ascx" />
     <Content Include="jobReport.aspx" />
     <Content Include="jobseekerDashboard.aspx" />
     <Content Include="logout.aspx" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="employeeDashboard.aspx.designer.cs">
       <DependentUpon>employeeDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Includes\isLoggedIn.ascx.cs">
+      <DependentUpon>isLoggedIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Includes\isLoggedIn.ascx.designer.cs">
+      <DependentUpon>isLoggedIn.ascx</DependentUpon>
     </Compile>
     <Compile Include="job.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>

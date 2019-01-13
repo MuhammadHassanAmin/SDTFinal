@@ -11,7 +11,15 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SDT_FinalEntities context = new SDT_FinalEntities();
+            dgvAllJobs.DataSource = context.jobs.Where(j => j.isOpen == true).ToList();
+            dgvAllJobs.DataBind(); 
         }
+        protected void applyNow_Click(object sender, EventArgs e)
+        {
+            int jobID = Convert.ToInt32((sender as LinkButton).CommandArgument);
+            Response.Redirect("~/viewJob.aspx?jobID=" + jobID);
+        }
+            
     }
 }

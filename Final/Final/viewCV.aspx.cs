@@ -11,6 +11,10 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
             int userID = Convert.ToInt32(Request.QueryString["userID"]);
             SDT_FinalEntities context = new SDT_FinalEntities();
             var cv = context.CVs.Where(c => c.user_id == userID).FirstOrDefault();

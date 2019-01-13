@@ -2,6 +2,8 @@
 
 <%@ Register Src="~/Includes/LinksUserControl.ascx" TagPrefix="uc1" TagName="LinksUserControl" %>
 <%@ Register Src="~/Includes/NavUserControl.ascx" TagPrefix="uc1" TagName="NavUserControl" %>
+<%@ Register Src="~/Includes/isLoggedIn.ascx" TagPrefix="uc1" TagName="isLoggedIn" %>
+
 
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
 
 </head>
 <body>
+    <uc1:isLoggedIn runat="server" ID="isLoggedIn" />
     <uc1:NavUserControl runat="server" ID="NavUserControl" />
 
 

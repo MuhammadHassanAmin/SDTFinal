@@ -12,6 +12,10 @@ namespace Final
          int job_id;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Convert.ToBoolean(Session["loggedin"]))
+            {
+                Response.Redirect("~/login.aspx");
+            }
             job_id = Convert.ToInt32(Request.QueryString["job_id"]);
             SDT_FinalEntities context = new SDT_FinalEntities();
             if (!Page.IsPostBack) { 

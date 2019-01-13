@@ -21,8 +21,7 @@ namespace Final
                 {
             int jobID = Convert.ToInt32((sender as LinkButton).CommandArgument);
             Response.Redirect("~/viewJob.aspx?jobID=" + jobID);
-
-        }
+            }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             int value = Convert.ToInt32(dropDownSearchBy.SelectedValue);
