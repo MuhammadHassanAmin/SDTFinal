@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # ignore an entire directory
 /bin/
+/Final/Final/Properties

@@ -117,6 +117,7 @@
     <Content Include="DownloadCV.aspx" />
     <Content Include="employeeDashboard.aspx" />
     <Content Include="jobseekerDashboard.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="ownerDashboard.aspx" />
     <Content Include="EntityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -156,6 +157,7 @@
     <Content Include="style.css" />
     <Content Include="updateJob.aspx" />
     <Content Include="viewApplications.aspx" />
+    <Content Include="viewAppliedJobs.aspx" />
     <Content Include="viewCV.aspx" />
     <Content Include="viewJob.aspx" />
     <Content Include="Web.config" />
@@ -205,6 +207,13 @@
     </Compile>
     <Compile Include="junc_job_applicant.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="ownerDashboard.aspx.cs">
       <DependentUpon>ownerDashboard.aspx</DependentUpon>
@@ -290,6 +299,13 @@
     </Compile>
     <Compile Include="viewApplications.aspx.designer.cs">
       <DependentUpon>viewApplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewAppliedJobs.aspx.cs">
+      <DependentUpon>viewAppliedJobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewAppliedJobs.aspx.designer.cs">
+      <DependentUpon>viewAppliedJobs.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewCV.aspx.cs">
       <DependentUpon>viewCV.aspx</DependentUpon>

@@ -15,8 +15,7 @@
             <li runat="server" id="searchJobLink"><a href="searchJob.aspx"><span class="fas fa-search"></span> Search Job</a></li>
             <li runat="server" id="createCVLink"><a href="createCV.aspx"><span class="far fa-id-card"></span> Create CV</a></li>
             <li runat="server" id="downloadCVLink"><a href="downloadCV.aspx"><span class="fas fa-file-download"></span> Download CV</a></li>
-            <li runat="server" id="viewApplicationsLink"><a href="viewApplications.aspx"><span class="fas fa-file-invoice"></span> View Applications</a></li>
-
+            <li runat="server" id="viewApplicationsLink"><a href="viewAppliedJobs.aspx"><span class="fas fa-file-invoice"></span> View Applications</a></li>
             <%--Global Links--%>
             <li runat="server"  id="dashboardLi"><a  runat="server"  id="dashboardLink" href=""><span class="fas fa-clipboard-list"></span> Dashboard</a></li>
             <li runat="server"  id="hideIfLoggedin"><a runat="server" id="regstrationLink" href="~/registration.aspx"><span class="fas fa-user-plus"></span> <span runat="server" id="regstrationText">Registration</span></a></li>

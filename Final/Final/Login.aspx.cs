@@ -21,7 +21,7 @@ namespace Final
             BusinessUsers bU = new BusinessUsers();
             pU.email = TextBox3.Text;
             pU.password = TextBox2.Text;
-            if (RadioButton_AccountType_Employee.Checked )
+            if (RadioButton_AccountType_Employee.Checked)
             {
                 pU.type = "employee";
             }
@@ -37,7 +37,7 @@ namespace Final
 
             }
 
-            if ( ! bU.IsValidEmail(pU.email))
+            if (!bU.IsValidEmail(pU.email))
             {
                 // Validating email
                 Response.Write("<script>alert('InValid Email Entered')</script>");
@@ -47,39 +47,64 @@ namespace Final
             {
                 // Login business logic
                 pU = bU.login(pU);
-                if (pU ==null)
+                if (pU == null)
                 {
-                    Response.Write("<script>alert('Credentials Does'nt match or user does'nt exist')</script>");
+                    errorMsg.Text = "Credentials did'nt match or user does'nt exist";
                 }
                 else
                 {
-                    //loggedin 
-                    Session["loggedin"] = true;
-                    Session["uid"] = pU.id;
-                    Session["uemail"] = pU.email;
-                    Session["uname"] = pU.name;
-                    Session["utype"] = pU.type;
-                    
-                    if (pU.type == "owner")
+                    if (pU.type == "employee")
                     {
-                        Response.Redirect("ownerDashboard.aspx");
+                        if (pU.isBlackList == true)
+                        {
+                            errorMsg.Text = "Your Account added into Black List You Can't Login!";
+                        }
+                        else if (pU.account_status == "rejected")
+                        {
+                            errorMsg.Text = "Your Account is Rejected!";
+
+                        }
+                        else if (pU.account_status == "pendingApproval")
+                        {
+                            errorMsg.Text = "Your Account is Pending For owner Approval!";
+                        }
+                        else
+                        {
+                            Session["loggedin"] = true;
+                            Session["uid"] = pU.id;
+                            Session["uemail"] = pU.email;
+                            Session["uname"] = pU.name;
+                            Session["utype"] = pU.type;
+                            Response.Redirect("employeeDashboard.aspx");
+
+                        }
                     }
-                    else if (pU.type == "jobseeker")
+                    else
                     {
-                        Response.Redirect("jobseekerDashboard.aspx");
 
+
+                        //loggedin 
+                        Session["loggedin"] = true;
+                        Session["uid"] = pU.id;
+                        Session["uemail"] = pU.email;
+                        Session["uname"] = pU.name;
+                        Session["utype"] = pU.type;
+
+                        if (pU.type == "owner")
+                        {
+                            Response.Redirect("ownerDashboard.aspx");
+                        }
+                        else if (pU.type == "jobseeker")
+                        {
+                            Response.Redirect("jobseekerDashboard.aspx");
+
+                        }
                     }
-                    else if (pU.type == "employee")
-                    {
-                        Response.Redirect("employeeDashboard.aspx");
-
-                    }
-
                 }
+
+
+
             }
-
-            
-
         }
     }
-}
+    }

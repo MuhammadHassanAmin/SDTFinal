@@ -76,6 +76,15 @@ namespace Final {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton_AccountType_JobSeeker;
         
         /// <summary>
+        /// errorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorMsg;
+        
+        /// <summary>
         /// Button2 control.
         /// </summary>
         /// <remarks>

@@ -41,7 +41,8 @@
                    <asp:RadioButton Cssclass="width-49p" GroupName="accountSelection" ID="RadioButton_AccountType_Employee" Text="Employee" value="Employee" runat="server" />
                    <asp:RadioButton CssClass="width-49p" GroupName="accountSelection" ID="RadioButton_AccountType_JobSeeker"  Text="JobSeeker"  value="JobSeeker" runat="server" />
                 </div>
-                                &nbsp;<asp:Button  CssClass="flat-button  mx-auto my-10"  ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
+            <asp:Label ID="errorMsg" runat="server" Text=""></asp:Label>
+                <asp:Button  CssClass="flat-button  mx-auto my-10"  ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
         </div>
 
 

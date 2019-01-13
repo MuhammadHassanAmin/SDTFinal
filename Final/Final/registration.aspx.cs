@@ -23,7 +23,7 @@ namespace Final
             pU.password = TextBox2.Text;
             pU.email = TextBox3.Text;
             pU.type = "employee";
-            
+            pU.account_status = "pendingApproval";
             if (RadioButton_AccountType_JobSeeker.Checked)
             {
 
